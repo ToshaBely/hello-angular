@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app = "HelloAngular">
+<head>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-route/angular-route.js"></script>
+    <link type="text/css" href="index.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Hello AngularJS</title>
+</head>
+<body>
+<header class="navbar">
+    <ul>
+        <li>
+            <a href="#/main">Main</a>
+        </li>
+        <li>
+            <a href="#/input">Input</a>
+        </li>
+    </ul>
+</header>
+<br>
+
+<div ng-view></div>
+
+<script src="src/app.module.js"></script>
+<script src="src/app.config.js"></script>
+<script src="src/services/values.service.js"></script>
+<script src="src/main/main.controller.js"></script>
+<script src="src/input/input.controller.js"></script>
+</body>
+</html>
