@@ -58,3 +58,5 @@ fabric.properties
 # .idea/misc.xml 
 # *.ipr
 
+/node_modules
+
