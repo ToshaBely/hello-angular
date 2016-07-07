@@ -1,0 +1,9 @@
+{
+  "name": "client",
+  "version": "0.0.1",
+  "dependencies": {},
+  "devDependencies": {
+    "angular": "^1.5.7",
+    "angular-route": "^1.5.7"
+  }
+}
