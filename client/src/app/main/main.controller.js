@@ -1,4 +1,6 @@
 (function () {
+    "use strict";
+    
     angular.module('HelloAngular')
         .controller("MainController", mainController);
 
