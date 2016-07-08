@@ -5,6 +5,13 @@
   "devDependencies": {
     "angular": "^1.5.7",
     "angular-route": "^1.5.7",
-    "gulp": "^3.9.1"
+    "bootstrap": "^3.3.6",
+    "browser-sync": "^2.13.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-inject": "^4.1.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglifyjs": "^0.6.2",
+    "jquery": "^1.11.3"
   }
 }

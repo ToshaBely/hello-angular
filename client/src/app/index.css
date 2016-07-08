@@ -1,7 +1,4 @@
-header ul li {
-    display: inline-block;
-}
-
 header {
-    background-color: aliceblue;
-}
+  background-color: white; }
+  header ul li {
+    display: inline-block; }

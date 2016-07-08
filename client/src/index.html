@@ -1,31 +1,44 @@
 <!DOCTYPE html>
 <html lang="en" ng-app = "HelloAngular">
-<head>
-    <script src="../node_modules/angular/angular.min.js"></script>
-    <script src="../node_modules/angular-route/angular-route.js"></script>
-    <link type="text/css" href="app/index.css" rel="stylesheet">
-    <meta charset="UTF-8">
-    <title>Hello AngularJS</title>
-</head>
-<body>
-<header class="navbar">
-    <ul>
-        <li>
-            <a href="#/main">Main</a>
-        </li>
-        <li>
-            <a href="#/input">Input</a>
-        </li>
-    </ul>
-</header>
-<br>
+    <head>
+        <!-- inject:css -->
+        <link rel="stylesheet" href="app/index.css">
+        <link rel="stylesheet" href="app/ext/css/bootstrap.min.css">
+        <!-- endinject -->
+        <!--Import Google Icon Font-->
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Hello AngularJS</title>
+    </head>
+    <body>
+        <div class="navbar" ng-controller="NavbarController as navCtrl">
+            <ul class="nav nav-tabs">
+                <li ng-class="{active: navCtrl.isActive('main')}">
+                    <a href="#/main">Main</a>
+                </li>
+                <li ng-class="{active: navCtrl.isActive('input')}">
+                    <a href="#/input">Input</a>
+                </li>
+            </ul>
+        </div>
+        <br>
+        <!--<p>some text</p>-->
 
-<div ng-view></div>
+        <div ng-view></div>
+        
+        <!-- inject:js -->
+        <script src="app/ext/js/jquery.min.js"></script>
+        <script src="app/ext/js/angular.js"></script>
+        <script src="app/ext/js/angular-route.js"></script>
+        <script src="app/ext/js/bootstrap.min.js"></script>
+        <script src="app/app.module.js"></script>
+        <script src="app/app.config.js"></script>
+        <script src="app/navbar.controller.js"></script>
+        <script src="app/input/input.controller.js"></script>
+        <script src="app/main/main.controller.js"></script>
+        <script src="app/services/values.service.js"></script>
+        <!-- endinject -->
 
-<script src="app/app.module.js"></script>
-<script src="app/app.config.js"></script>
-<script src="app/services/values.service.js"></script>
-<script src="app/main/main.controller.js"></script>
-<script src="app/input/input.controller.js"></script>
-</body>
+    </body>
 </html>
