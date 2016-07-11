@@ -3,30 +3,43 @@
     <head>
         <!-- inject:css -->
         <link rel="stylesheet" href="app/index.css">
+        <link rel="stylesheet" href="app/user/user.css">
         <link rel="stylesheet" href="app/ext/css/bootstrap.min.css">
         <!-- endinject -->
-        <!--Import Google Icon Font-->
-        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Hello AngularJS</title>
     </head>
     <body>
+        <!--navigation-->
         <div class="navbar" ng-controller="NavbarController as navCtrl">
             <ul class="nav nav-tabs">
-                <li ng-class="{active: navCtrl.isActive('main')}">
-                    <a href="#/main">Main</a>
+                <li ng-class="{active: navCtrl.isActive('user')}">
+                    <a href="#/user">User</a>
                 </li>
-                <li ng-class="{active: navCtrl.isActive('input')}">
-                    <a href="#/input">Input</a>
+                <li role="presentation" class="dropdown"
+                    ng-class="{active: navCtrl.isActive('main') || navCtrl.isActive('input')}">
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button">
+                        Other <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#/main">Main</a>
+                        </li>
+                        <li>
+                            <a href="#/input">Input</a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </div>
-        <br>
-        <!--<p>some text</p>-->
 
+        <!--content-->
         <div ng-view></div>
-        
+
+        <!--footer-->
+        <p class="navbar-fixed-bottom text-left">&copy; 2016 Anton Bely</p>
+
         <!-- inject:js -->
         <script src="app/ext/js/jquery.min.js"></script>
         <script src="app/ext/js/angular.js"></script>
@@ -38,6 +51,7 @@
         <script src="app/input/input.controller.js"></script>
         <script src="app/main/main.controller.js"></script>
         <script src="app/services/values.service.js"></script>
+        <script src="app/user/user.controller.js"></script>
         <!-- endinject -->
 
     </body>

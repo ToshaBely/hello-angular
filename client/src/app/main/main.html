@@ -1,1 +1,10 @@
-<h1>{{message}}</h1>
+<div class="text-center">
+    <h4>{{message}}</h4>
+    <article onclick="alert('article')">
+        <div onclick="alert('div')">
+            <h3>Bubbling</h3>
+            <label>button -> div -> article</label>
+            <button type="button" onclick="alert('button')">Push</button>
+        </div>
+    </article>
+</div>

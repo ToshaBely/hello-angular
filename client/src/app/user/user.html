@@ -1,0 +1,25 @@
+<div>
+    <div class="col-sm-2 right-border">
+        <p>Ready for test: {{userCtrl.isReadyForTest}}</p>
+        <button type="button" class="btn" ng-click="userCtrl.changeStatus()">
+            <span class="glyphicon glyphicon-flash"></span> &nbsp; Change
+        </button>
+    </div>
+    <div class="col-sm-2">
+        <br>
+        <button type="button" class="btn btn-info"
+                ng-if="!userCtrl.isReadyForTest" ng-disabled="userCtrl.isTestStarted" ng-click="userCtrl.requestTest()">
+            <span class="glyphicon glyphicon-send"></span> &nbsp; Request test
+        </button>
+        <button type="button" class="btn btn-success"
+                ng-if="userCtrl.isReadyForTest" ng-disabled="userCtrl.isTestStarted" ng-click="userCtrl.startTest()">
+            <span class="glyphicon glyphicon-pencil"></span> &nbsp; Start test
+        </button>
+    </div>
+    <div class="col-sm-6" ng-if="userCtrl.isTestStarted">
+        <p>Test started</p>
+        <button type="button" class="btn btn-warning" ng-click="userCtrl.completeTest()">
+            <span class="glyphicon glyphicon-ok"></span> &nbsp; Complete
+        </button>
+    </div>
+</div>

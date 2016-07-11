@@ -1,12 +1,12 @@
-<div>
-    <label>Name:</label>
-    <input type="text" placeholder="Enter your name" ng-model="yourName">
-    <button type="button" ng-click="inputCtrl.changeClick()">Change</button>
-    <hr>
-
-    <h1 class="text-center">Hello {{yourName}}!</h1>
-    <hr>
-
-    <p>{{obj.name}}</p>
-    <p>{{inputCtrl.obj.name}}</p>
+<div class="col-sm-8 col-sm-offset-2">
+    <div class="col-sm-6 text-center">
+        <label>Name:</label>
+        <input type="text" placeholder="Enter your name" ng-model="yourName">
+        <br><br>
+        <label>Change object from controller:</label>
+        <button type="button" class="btn btn-info" ng-click="inputCtrl.changeClick()">Change!</button>
+    </div>
+    <div class="col-sm-6 text-center">
+        <h2>{{inputCtrl.string + ' ' + yourName}}!</h2>
+    </div>
 </div>
